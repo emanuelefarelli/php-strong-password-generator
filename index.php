@@ -16,7 +16,7 @@
 
     <title>Password Generator</title>
 </head>
-<body class="bg-secondary">
+<body class="bg-secondary text-light">
     <h1 class="text-center p-5 bg-dark">
         Very Strong Password Generator!
     </h1>
