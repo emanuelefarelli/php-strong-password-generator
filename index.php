@@ -2,8 +2,6 @@
     
     
     $lenghtValue = $_GET['lenght-input'];
-    var_dump($lenghtValue);
-
     
     function generatePassword($lenght){
         $specialArray = ['!','@','#','$','%','^','&','*','(',')','_','-','!','=','?',':','.',';'];
@@ -37,10 +35,7 @@
         return implode($newPassword);
     };
 
-    
     $newPassword = generatePassword($lenghtValue);
-
-    var_dump($newPassword);
 
 ?>
 
@@ -66,5 +61,24 @@
             </button>
         </form>
     </div>
+    <?php if((($_GET['lenght-input']) > 0) && (($_GET['lenght-input'])!= null)){ ?>
+    <div>
+        <h2>
+            La tua password generata è:
+        </h2>
+        <p>
+            <?php
+                echo $newPassword;
+            ?>
+        </p>
+    </div>
+    <?php } else { ?>
+    <div>
+        <p>
+            I parametri inseriti non sono validi, prego rincontrollare.
+        </p>
+    </div>
+    <?php } ?>
+
 </body>
 </html>
