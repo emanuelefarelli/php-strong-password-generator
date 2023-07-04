@@ -25,18 +25,18 @@
             <label for="length-input">
                 Lunghezza Password:
             </label>
-            <input type="number" name="lenght-input" id="lenght-input">
+            <input type="number" name="length-input" id="length-input">
             <input type="submit" value="Send">
         </form>
     </div>
-    <?php if((($_GET['lenght-input']) > 0) && (($_GET['lenght-input'])!= null)){ ?>
+    <?php if((($_GET['length-input']) > 0) && (($_GET['length-input']) != null)){ ?>
     <div class="bg-info w-50 mx-auto mt-5 p-5">
         <h2>
             La tua password generata è:
         </h2>
         <p class="fs-2 text-success">
             <?php
-                echo $newPassword;
+                header('Location: ./showPassword.php');
             ?>
         </p>
     </div>

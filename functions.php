@@ -1,9 +1,9 @@
 <?php
     
-    if(($_GET['lenght-input'] > 0) && ($_GET['lenght-input'] != null)){
-        $lenghtValue = $_GET['lenght-input'];
+    if(($_GET['length-input'] > 0) && (($_GET['length-input']) != null)){
+        $lenghtValue = $_GET['length-input'];
         $newPassword = generatePassword($lenghtValue);
-        }
+    }
     
     function generatePassword($lenght){
         $specialArray = ['!','@','#','$','%','^','&','*','(',')','_','-','!','=','?',':','.',';'];
@@ -34,7 +34,8 @@
             }
         }
 
-        return implode($newPassword);
+        session_start();
+        $_SESSION['generatedPassword'] = implode($newPassword);
     };
 
 
